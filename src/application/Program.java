@@ -20,7 +20,7 @@ public class Program {
 		Seller seller = sellerDao.findById(3);
 		System.out.println(seller);
 		
-		System.out.println("\n ==== TEST 2: seller findById ====");
+		System.out.println("\n ==== TEST 2: seller findByDepartment ====");
 		Department department = new Department(2, null);
 		List<Seller> list = sellerDao.findByDepartment(department);
 		for (Seller obj : list) {
@@ -38,7 +38,7 @@ public class Program {
 		sellerDao.insert(newSeller);
 		System.out.println("Inserted! New id = " + newSeller.getId());
 	
-		System.out.println("\n ==== TEST 5: seller insert ====");
+		System.out.println("\n ==== TEST 5: seller update ====");
 		seller = sellerDao.findById(1);
 		seller.setName("Martha Waine");
 		sellerDao.update(seller);
